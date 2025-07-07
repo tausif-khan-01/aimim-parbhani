@@ -34,9 +34,9 @@ export default function AIMIMHero() {
 
           {/* Description */}
           <p className="text-lg md:text-xl text-gray-300 mb-10 max-w-2xl mx-auto leading-relaxed">
-            Join the movement for Liberty , Equality, Fraternity and Justice. Be a part of
-            AIMIM Parbhani&apos;s mission by serving the community and to build a
-            better tomorrow.
+            Join the movement for Liberty , Equality, Fraternity and Justice. Be
+            a part of AIMIM Parbhani&apos;s mission by serving the community and
+            to build a better tomorrow.
           </p>
 
           {/* Call to Action Buttons */}
@@ -52,10 +52,6 @@ export default function AIMIMHero() {
               </span>
               <div className="absolute inset-0 bg-gradient-to-r from-green-400 to-green-500 rounded-full opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
             </Link>
-
-            <div className="inline-block bg-green-600/90 text-white px-6 py-3 rounded-full font-semibold text-lg backdrop-blur-sm border border-green-500/30">
-              Coming Soon
-            </div>
           </div>
 
           {/* Urdu Text */}
