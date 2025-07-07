@@ -34,8 +34,8 @@ export default function AIMIMHero() {
 
           {/* Description */}
           <p className="text-lg md:text-xl text-gray-300 mb-10 max-w-2xl mx-auto leading-relaxed">
-            Join the movement for justice, equality, and progress. Be a part of
-            AIMIM Parbhani&apos;s mission to serve the community and build a
+            Join the movement for Liberty , Equality, Fraternity and Justice. Be a part of
+            AIMIM Parbhani&apos;s mission by serving the community and to build a
             better tomorrow.
           </p>
 
