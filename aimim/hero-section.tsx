@@ -55,14 +55,14 @@ export default function AIMIMHero() {
           </div>
 
           {/* Urdu Text */}
-          <div className="mt-8 text-right">
+          <div className="mt-8 text-center">
             <p
-              className="text-2xl md:text-3xl text-green-300 font-bold"
+              className=" text-green-300 text-lg md:text-3xl font-bold"
               dir="rtl"
             >
               اتحاد، مساوات، بھائی چارہ، انصاف
             </p>
-            <p className="text-lg text-gray-300 mt-2">
+            <p className="text-lg md:text-3xl text-gray-300 mt-2">
               Liberty , Equality, Fraternity, Justice
             </p>
           </div>
