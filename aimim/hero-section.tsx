@@ -1,6 +1,7 @@
 import { Facebook, Instagram } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import VideoPlayer from "./components/VideoPlayer";
 
 export default function AIMIMHero() {
   return (
@@ -8,15 +9,7 @@ export default function AIMIMHero() {
       <section className="relative grid grid-cols-1 md:grid-cols-2 bg-white text-gray-800">
         {/* Right Video */}
         <div className="relative min-h-[50vh] md:min-h-screen overflow-hidden">
-          <video
-            className="absolute inset-0 w-full h-full object-cover"
-            loop
-            playsInline
-            autoPlay
-            poster=""
-          >
-            <source src="/video/join_aimim.mp4" type="video/mp4" />
-          </video>
+          <VideoPlayer />
         </div>
 
         {/* Left Content */}
@@ -27,7 +20,7 @@ export default function AIMIMHero() {
               <Image
                 src="/aimim-logo.png"
                 alt="AIMIM Logo"
-                className="w-16 h-16 md:w-32 md:h-32"
+                className="w-16 h-16 md:w-32 md:h-32 mx-auto md:mx-0"
                 width={128}
                 height={128}
                 priority
