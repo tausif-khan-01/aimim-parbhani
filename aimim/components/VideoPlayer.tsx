@@ -23,7 +23,7 @@ export default function VideoPlayer() {
         autoPlay
         playsInline
         muted={muted}
-        poster="/images/banner1.jpg"
+        poster=""
       >
         <source src="/video/join_aimim.mp4" type="video/mp4" />
       </video>
