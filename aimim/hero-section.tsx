@@ -1,76 +1,110 @@
+import { Facebook, Instagram } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function AIMIMHero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image */}
-      <div className="absolute inset-0 z-0">
-        <Image
-          src="/aimim-rally.jpg"
-          alt="AIMIM Parbhani Rally - All India Majlis-e-Ittehadul Muslimeen"
-          fill
-          className="object-cover"
-          priority
-        />
-        <div className="absolute inset-0 bg-black/40" />
-      </div>
+    <>
+      <section className="relative grid grid-cols-1 md:grid-cols-2 bg-white text-gray-800">
+        {/* Right Video */}
+        <div className="relative min-h-[50vh] md:min-h-screen overflow-hidden">
+          <video
+            className="absolute inset-0 w-full h-full object-cover"
+            loop
+            playsInline
+            autoPlay
+            poster=""
+          >
+            <source src="/video/join_aimim.mp4" type="video/mp4" />
+          </video>
+        </div>
 
-      <div className="relative z-10 container mx-auto px-4 text-center">
-        {/* Main Content */}
-        <div className="max-w-4xl mx-auto bg-black/60 backdrop-blur-sm p-8 rounded-2xl border border-green-500/20">
-          {/* Main Heading */}
-          <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold text-white mb-6 drop-shadow-2xl">
-            <span className="block">AIMIM</span>
-            <span className="block text-green-400 text-5xl md:text-6xl lg:text-7xl">
-              Parbhani
-            </span>
-          </h1>
+        {/* Left Content */}
+        <div className="z-10 relative flex flex-col justify-center px-6 py-8 bg-white/80 backdrop-blur-sm">
+          <div className="max-w-2xl mx-auto text-center md:text-left">
+            {/* Logo */}
+            <div className="mb-2">
+              <Image
+                src="/aimim-logo.png"
+                alt="AIMIM Logo"
+                className="w-16 h-16 md:w-32 md:h-32"
+                width={128}
+                height={128}
+                priority
+              />
+            </div>
 
-          {/* Subtitle */}
-          <p className="text-xl md:text-2xl text-gray-200 mb-8 font-medium">
-            All India Majlis-e-Ittehadul Muslimeen
-          </p>
+            <h1 className="text-5xl md:text-6xl font-extrabold text-gray-900 mb-4">
+              AIMIM
+              <span className="block text-green-700 text-4xl md:text-5xl">
+                Parbhani
+              </span>
+            </h1>
 
-          {/* Description */}
-          <p className="text-lg md:text-xl text-gray-300 mb-10 max-w-2xl mx-auto leading-relaxed">
-            Join the movement for Liberty , Equality, Fraternity and Justice. Be
-            a part of AIMIM Parbhani&apos;s mission by serving the community and
-            to build a better tomorrow.
-          </p>
+            <p className="text-xl md:text-2xl text-gray-700 font-medium mb-6">
+              All India Majlis-e-Ittehadul Muslimeen
+            </p>
 
-          {/* Call to Action Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <p className="text-md md:text-lg text-gray-600 mb-8 leading-relaxed">
+              Join the movement for Liberty, Equality, Fraternity and Justice.
+              Be a part of AIMIM Parbhani&apos;s mission by serving the
+              community and building a better tomorrow.
+            </p>
+
             <Link
               href="http://volunteer.mimparbhani.com/"
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white bg-gradient-to-r from-green-600 to-green-700 rounded-full hover:from-green-700 hover:to-green-800 transition-all duration-300 transform hover:scale-105 hover:shadow-xl min-w-[280px]"
+              className="inline-flex items-center justify-center px-6 py-3 text-lg font-semibold text-white rounded-full bg-green-600 hover:bg-green-700 transition-all duration-300 shadow-md"
             >
-              <span className="relative z-10">
-                Join AIMIM Parbhani as Volunteer
-              </span>
-              <div className="absolute inset-0 bg-gradient-to-r from-green-400 to-green-500 rounded-full opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
+              Join AIMIM Parbhani as Volunteer
             </Link>
-          </div>
 
-          {/* Urdu Text */}
-          <div className="mt-8 text-center">
-            <p
-              className=" text-green-300 text-lg md:text-3xl font-bold"
-              dir="rtl"
-            >
-              اتحاد، مساوات، بھائی چارہ، انصاف
-            </p>
-            <p className="text-lg md:text-3xl text-gray-300 mt-2">
-              Liberty , Equality, Fraternity, Justice
-            </p>
+            {/* Urdu & English Quote */}
+            <div className="mt-10 mb-2">
+              <p
+                className="text-green-700 text-xl md:text-2xl font-bold"
+                dir="rtl"
+              >
+                اتحاد، مساوات، بھائی چارہ، انصاف
+              </p>
+              <p className="text-gray-700 text-lg md:text-xl mt-2">
+                Liberty, Equality, Fraternity, Justice
+              </p>
+            </div>
+
+            {/* Social Icons */}
+            <div className="p-2 space-x-2">
+              {[
+                {
+                  href: "https://www.instagram.com/aimimparbhani/",
+                  icon: <Instagram className="w-6 h-6" />,
+                  bg: "bg-pink-500",
+                },
+                {
+                  href: "https://www.facebook.com/mdgouse04",
+                  icon: <Facebook className="w-6 h-6 text-white" />,
+                  bg: "bg-blue-700",
+                },
+              ].map(({ href, icon, bg }, index) => (
+                <Link
+                  key={index}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`inline-flex items-center justify-center p-2 rounded-full text-white transition transform hover:scale-110 ${bg}`}
+                >
+                  {icon}
+                </Link>
+              ))}
+            </div>
           </div>
         </div>
-      </div>
-      {/* Decorative Elements */}
-      <div className="absolute top-4 left-4 w-2 h-32 bg-green-600 opacity-50"></div>
-      <div className="absolute bottom-4 right-4 w-32 h-2 bg-green-600 opacity-50"></div>
-    </section>
+
+        {/* Decorative Corners */}
+        <div className="absolute top-4 left-4 w-2 h-28 bg-green-500/60 rounded-full" />
+        <div className="absolute bottom-4 right-4 w-28 h-2 bg-green-500/60 rounded-full" />
+      </section>
+    </>
   );
 }
