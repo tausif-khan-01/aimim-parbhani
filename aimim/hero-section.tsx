@@ -77,7 +77,7 @@ export default function AIMIMHero() {
             <div className="p-2 space-x-2">
               {[
                 {
-                  href: "https://www.instagram.com/aimimparbhani/",
+                  href: "https://www.instagram.com/m.ghaus",
                   icon: <Instagram className="w-6 h-6" />,
                   bg: "bg-pink-500",
                 },
