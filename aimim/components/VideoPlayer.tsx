@@ -35,9 +35,9 @@ export default function VideoPlayer() {
         aria-label="Toggle Mute"
       >
         {muted ? (
-          <VolumeX className="w-5 h-5 md:size-8" />
+          <VolumeX className="size-5 md:size-8" />
         ) : (
-          <Volume2 className="w-5 h-5 md:size-8" />
+          <Volume2 className="size-5 md:size-8" />
         )}
       </button>
     </div>
