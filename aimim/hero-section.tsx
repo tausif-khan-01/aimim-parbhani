@@ -46,7 +46,6 @@ export default function AIMIMHero() {
 
             <Link
               href="http://volunteer.mimparbhani.com/"
-              target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-6 py-3 text-lg font-semibold text-white rounded-full bg-green-600 hover:bg-green-700 transition-all duration-300 shadow-md"
             >
